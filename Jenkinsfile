@@ -9,12 +9,12 @@ stage('Checkout') {
 steps {
 echo 'cloning..'
 // Use withCredentials to provide GitHub credentials
-//withCredentials([usernamePassword(credentialsId: 'theitern',
-//usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-//script {
+withCredentials([usernamePassword(credentialsId: 'theitern',
+usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+script {
 // Clone the private GitHub repository using the provided
-//credentials
-//git credentialsId: 'theitern', url:
+credentials
+git credentialsId: 'abayomi2', url:
 "https://github.com/abayomi2/DevOpsCodeDemo.git"
 }
 }
