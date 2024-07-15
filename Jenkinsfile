@@ -8,14 +8,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'cloning..'
-                // Use withCredentials to provide GitHub credentials
-                withCredentials([usernamePassword(credentialsId: 'abayomi2', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    script {
-                        // Clone the private GitHub repository using the provided credentials
-                        git credentialsId: 'abayomi2', url: "https://github.com/abayomi2/DevopsBasics.git"
-                    }
-                }
+                // Checkout the code from GitHub repository
+                git 'https://github.com/abayomi2/DevopsBasics.git'
             }
         }
 
