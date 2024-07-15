@@ -15,7 +15,7 @@ script {
 // Clone the private GitHub repository using the provided
 credentials
 git credentialsId: 'theitern', url:
-"https://github.com/theitern/DevOpsCodeDemo.git"
+"https://github.com/abayomi2/DevOpsCodeDemo.git"
 }
 }
 }
@@ -31,8 +31,6 @@ steps {
 echo 'codeReview'
 sh 'mvn pmd:pmd'
 }
-IT Training at the theITern.com DevOps I Manual
-pg. 34
 }
 stage('UnitTest') {
 steps {
