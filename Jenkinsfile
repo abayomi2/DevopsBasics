@@ -11,7 +11,7 @@
             }
             steps {
                 echo 'Cloning...'
-                git 'https://github.com/theitern/DevopsBasics.git'
+                git 'https://github.com/abayomi2/DevopsBasics.git'
             }
         }
         
