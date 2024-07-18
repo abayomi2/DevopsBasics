@@ -3,61 +3,32 @@ pipeline {
         jdk 'myjava'
         maven 'mymaven'
     }
-    
     agent any
-    
+
     stages {
         stage('Checkout') {
-            agent {
-                label 'Master'
-            }
             steps {
-                echo 'Cloning...'
+                // Checkout the code from GitHub repository
                 git 'https://github.com/abayomi2/DevopsBasics.git'
             }
         }
-        
+
         stage('Compile') {
-            agent {
-                label 'Slave_1'
-            }
             steps {
-                echo 'Compiling...'
+                echo 'compiling..'
                 sh 'mvn compile'
             }
         }
-        
+
         stage('CodeReview') {
-            agent {
-                label 'Slave_1'
-            }
             steps {
-                echo 'Code Review...'
+                echo 'codeReview'
                 sh 'mvn pmd:pmd'
             }
         }
-        
-        stage('UnitTest') {
-            agent {
-                label 'Slave_1'
-            }
+
+    stage('Package') {
             steps {
-                echo 'Testing...'
-                sh 'mvn test'
-            }
-            post {
-                success {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
-        }
-        
-        stage('Package') {
-            agent {
-                label 'Master'
-            }
-            steps {
-                echo 'Packaging...'
                 sh 'mvn package'
             }
         }
