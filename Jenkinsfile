@@ -23,9 +23,7 @@ https://github.com/abayomi2/DevOpsBasics.git"
 stage('Compile') {
 steps {
 
-IT Training at the theITern.com DevOps I Manual
 
-pg. 29
 echo 'compiling..'
 sh 'mvn compile'
 }
