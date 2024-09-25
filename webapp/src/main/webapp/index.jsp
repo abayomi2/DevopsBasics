@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorful Page</title>
+    <title>Abayomi's Web Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -45,7 +45,7 @@
 <body>
     <div>
         <h1>A demo that the CD/CD pipeline is working</h1>
-        <p>For additional info, click <a href="#">click here</a> theitern.com!</p>
+        <p>For additional info, <a href="#">Contact</a> oguntiloyea@gmail.com!</p>
     </div>
 </body>
 
