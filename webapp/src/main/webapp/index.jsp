@@ -45,7 +45,7 @@
 <body>
     <div>
         <h1>A demo that the CD/CD pipeline is working</h1>
-        <p>For additional info, <a href="#">Contact</a> oguntiloyea@gmail.com!</p>
+        <p>For additional info, <a href="#">Email</a> oguntiloyea@gmail.com!</p>
     </div>
 </body>
 
